@@ -8,6 +8,10 @@ import javascript from './javascript.png'
 import django from './django.png'
 import python from './python.png'
 import textblob from './textblob-logo.png'
+
+URL = 'http://djangonlp-env.ugtmwmerxj.us-east-1.elasticbeanstalk.com'
+// URL = 'http://localhost:8000'
+
 class App extends Component {
     constructor(props) {
         super(props)
@@ -20,7 +24,7 @@ class App extends Component {
     }
 
     componentDidMount= async ()=>{
-        const response = await Axios.get('/reddit/getsublist')
+        const response = await Axios.get(`${URL}/reddit/getsublist`)
         console.log(response.data)
         const sublist = this.redditList(response.data.posts)
         const subcount = response.data.count 
@@ -66,7 +70,7 @@ class App extends Component {
     searchData= async(event)=>{
         event.preventDefault()
         this.setState({isLoaded:false, resultsLoaded:false})
-        const response = await Axios.get(`/reddit/search=${this.state.searchWord}`)
+        const response = await Axios.get(`${URL}/reddit/search=${this.state.searchWord}`)
         console.log(response.data);
         const {subjectivity, polarity} = response.data.sentiment
         const sentimentData = <h1>Polarity: {(polarity*100).toFixed(2)} | Subjectivity: {(subjectivity*100).toFixed(2)}</h1>
@@ -84,7 +88,7 @@ class App extends Component {
     fetchData = async(event) =>{
         this.setState({isLoaded:false, resultsLoaded:false})
         event.preventDefault()
-        const response = await Axios.get(`/reddit/subreddit=${this.state.searchBox}`)
+        const response = await Axios.get(`${URL}/reddit/subreddit=${this.state.searchBox}`)
         console.log(response.data)
         const {subjectivity, polarity} = response.data.sentiment
         const sentimentData = <h1>Polarity: {(polarity*100).toFixed(2)} | Subjectivity: {(subjectivity*100).toFixed(2)}</h1>
