@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './logo.svg'
 import './App.css';
 import Axios from 'axios'
 import Loader from './Loader'
@@ -10,7 +10,6 @@ import python from './python.png'
 import textblob from './textblob-logo.png'
 
 URL = 'http://djangonlp-env.ugtmwmerxj.us-east-1.elasticbeanstalk.com'
-// URL = 'http://localhost:8000'
 
 class App extends Component {
     constructor(props) {
