@@ -212,8 +212,9 @@ render() {
                     {this.state.isLoaded && this.state.sublist}
             </div>
         </div>
+      <h1 className="built-with">Built With:</h1>
+
         <div  className = "icons" >
-      <h1>Built With:</h1>
       <img src ={python} className="icon"/>
       <img src ={django} className="icon"/>
       <img src ={textblob} className="icon"/>

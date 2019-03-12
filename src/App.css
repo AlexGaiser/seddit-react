@@ -158,4 +158,10 @@ header{
     display:flex;
     border: solid 1px black;
     justify-content: center;
+    margin: 0;
+}
+.built-with{
+    margin:0;
+    font-size: 27px;
+    align-self: flex-start;
 }
