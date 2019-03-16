@@ -165,3 +165,18 @@ header{
     font-size: 27px;
     align-self: flex-start;
 }
+
+@media not all and (hover:none){
+    .nav-link:hover{
+        background-color: gray;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .search-field{
+        flex-direction: column;
+    }
+    .app-main{
+        flex-wrap: wrap;
+    }
+}
