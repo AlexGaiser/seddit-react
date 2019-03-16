@@ -91,6 +91,7 @@ header{
 .pol-message{
     font-size: 30px;
     max-width: 50%;
+    word-wrap: initial;
 }
 
 .sidebar-item{
@@ -171,9 +172,16 @@ header{
     .search-field{
         flex-direction: column;
     }
+    .App{
+        flex-wrap: wrap;
+        min-height:100vh;
+
+    }
     .app-main{
         flex-wrap: wrap;
         text-align: center;
+        justify-content: center;
+        flex-direction: column;
     }
     .sidebar-container{
         display: none;
