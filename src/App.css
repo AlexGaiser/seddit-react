@@ -196,5 +196,13 @@ header{
         text-decoration: underline;
         color:#F95738;
     }
+    h1{
+        max-width: 90vw;
+    }
+    .pol-message{
+        font-size: 20px;
+        width: 100vw;
+        padding: 20px
+    }
 
 }
