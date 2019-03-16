@@ -28,7 +28,8 @@ header{
     align-items: center;
     min-width: 50vw;
     min-height: 40vh;
-    padding: 20px;
+    max-width: 100vw;
+    padding: 0px;
     text-align: left;
 }
 .search-field{
@@ -208,6 +209,6 @@ header{
         padding: 20px
     }
     .results-field{
-        padding:0px;
+        padding:0px !important;
     }
 }
