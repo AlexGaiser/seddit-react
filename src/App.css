@@ -43,6 +43,7 @@ header{
 .search-button{
     height: 35px;
     cursor: pointer;
+    width:20%;
 }
 .search-button:hover{
     color:white;
@@ -52,7 +53,7 @@ header{
 }
 .search-input{
     height: 30px;
-    width: 300px;
+    width: 80%;
     font-size: 25px;
 
 }
@@ -171,6 +172,8 @@ header{
 @media screen and (max-width: 700px){
     .search-field{
         flex-direction: column;
+        justify-content: center;
+        max-width: 80vw !important;
     }
     .App{
         flex-wrap: wrap;
