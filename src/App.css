@@ -5,7 +5,6 @@ header{
 }
 .App{
     display:flex;
-    padding: 20px;
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     height: 80vh;
@@ -17,6 +16,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .reddit-logo{
@@ -99,14 +99,7 @@ header{
 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #F95738; /* Blue */
@@ -153,13 +146,15 @@ header{
   
   .icon{max-height:100px;
   max-width: 100px;
-}
+  }
 .icons{
     display:flex;
-    border: solid 1px black;
+    border-top: solid 1px black;
     justify-content: center;
     margin: 0;
+    flex-wrap: wrap;
 }
+ 
 .built-with{
     margin:0;
     font-size: 27px;
@@ -172,11 +167,26 @@ header{
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 700px){
     .search-field{
         flex-direction: column;
     }
     .app-main{
         flex-wrap: wrap;
+        text-align: center;
     }
+    .sidebar-container{
+        display: none;
+    }
+    .search-button{
+        color:white;
+        text-decoration: underline;
+        background-color:#F95738;
+        transition: ease-in .1s;
+    }
+    .main-title{
+        text-decoration: underline;
+        color:#F95738;
+    }
+
 }
